@@ -1,0 +1,5 @@
+node_modules/
+logs/
+config/settings.toml
+data/addresses.txt
+*.json
