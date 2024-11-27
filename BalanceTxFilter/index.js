@@ -102,6 +102,8 @@ const main = async () => {
             const signatures = await withRetry(() => connection.getSignaturesForAddress(publicKey, { limit: 1000 }));
             const transactionCount = signatures.length;
 
+            console.log(`${address} - ${transactionCount}`);
+
             if (transactionCount < txMin || transactionCount > txMax) {
                 return null;
             }
